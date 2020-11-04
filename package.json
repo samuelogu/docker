@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/samuelogu/docker/issues"
   },
-  "homepage": "https://github.com/samuelogu/docker#readme"
+  "homepage": "https://github.com/samuelogu/docker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
