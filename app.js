@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/customers', (req, res) => {
-    res.send('Hello World!')
+    customer.get
 })
 
 app.listen(port, () => {
