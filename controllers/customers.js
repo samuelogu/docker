@@ -3,7 +3,8 @@ const Customer = require('../models/customers')
 class Customers {
 
     static get (req, res) {
-
+        let allCustomers = Customer.find({})
+        res.status(200).json(allCustomers)
     }
 
     create (req, res) {
