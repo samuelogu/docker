@@ -25,7 +25,7 @@ app.get('/customers', customer.get)
 
 app.post('/customers', customer.create)
 
-const url = 'mongodb://localhost:27018/account'
+const url = 'mongodb://mongo:27018/account'
 
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('Mongodb connected!');

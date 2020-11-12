@@ -1,18 +1,18 @@
 version: '3.8'
 services:
-#  app:
-#    container_name: app
-#    restart: always
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    ports:
-#    - '3000:3000'
-#    command: node app
-#    depends_on:
-#      - mongo
-#    volumes:
-#    - .:/var/www/app:rw
+  app:
+    container_name: app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - '3000:3000'
+    command: node app
+    depends_on:
+      - mongo
+    volumes:
+    - .:/var/www/app:rw
 
   mongo:
     image: mongo
