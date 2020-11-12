@@ -3,6 +3,10 @@ const app = express()
 const port = 3000
 const bodyParser = require('body-parser')
 
+const multer = require('multer');
+const data = multer();
+app.use(data.array());
+
 app.use(bodyParser.json())
 
 const db = require('./db');
