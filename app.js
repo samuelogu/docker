@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 const bodyParser = require('body-parser')
 
 const multer = require('multer');
@@ -25,10 +25,10 @@ app.get('/customers', customer.get)
 
 app.post('/customers', customer.create)
 
-const url = 'mongodb://mongo:27018/account'
+const url = 'mongodb://mongo:27017/account'
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`App listening at http://localhost:${port}`)
     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
         console.log('Mongodb connected!');
     }).catch(err => {
