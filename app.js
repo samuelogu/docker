@@ -27,12 +27,12 @@ app.post('/customers', customer.create)
 
 const url = 'mongodb://mongo:27018/account'
 
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
-    console.log('Mongodb connected!');
-    app.listen(port, () => {
-        console.log('Testing!');
-        console.log(`Example app listening at http://localhost:${port}`)
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+    mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+        console.log('Mongodb connected!');
+    }).catch(err => {
+        console.log(err);
     })
-}).catch(err => {
-    console.log(err);
 })
+
