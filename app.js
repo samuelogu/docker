@@ -25,7 +25,7 @@ app.get('/customers', customer.get)
 
 app.post('/customers', customer.create)
 
-const url = 'mongodb://mongo:27117/account'
+const url = 'mongodb://mongo:27017/account'
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
