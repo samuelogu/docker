@@ -8,8 +8,10 @@ const MONGO_PORT = process.env.MONGO_PORT
 const MONGO_DB = process.env.MONGO_DB;
 
 // const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
-const url = 'mongodb://localhost:27017/accodunt'
+const url = 'mongodb://localhost:27017/account'
 
-// console.log(url);
-
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+    console.log('Mongodb connected!');
+}).catch(err => {
+    console.log(err);
+})
